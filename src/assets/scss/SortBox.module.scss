@@ -1,0 +1,26 @@
+.sort-box-group {
+	display: flex;
+	flex-direction: column;
+	min-width: max(500px, 33%);
+	text-align: center;
+	gap: 0.5rem;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+	backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	padding: 0.5rem 1.65rem 1.5rem 1.5rem;
+
+	& > span {
+		font-weight: bold;
+		color: white;
+		font-size: 2em;
+	}
+
+	.sort-box {
+		width: 100%;
+		display: flex;
+		gap: 0.025rem;
+		height: 100%;
+	}
+}
