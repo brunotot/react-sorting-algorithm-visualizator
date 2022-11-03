@@ -1,7 +1,7 @@
 import styles from "./../assets/scss/SortBox.module.scss";
 import Algorithm, { IAlgorithmKey } from "../algorithms/Algorithm";
 import Bar from "./Bar";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import { AlgorithmContext } from "./Dashboard";
 
 export type SortBoxProps = {
@@ -17,7 +17,10 @@ export default function SortBox(props: SortBoxProps) {
 	const speed = state.config.speed;
 	const label = algorithmData.name;
 	const [data, setData] = useState([...state.dataSample]);
-	const [generator, setGenerator] = useState(undefined as any);
+	const generator = useMemo(
+		() => algorithmData.generator(state.dataSample),
+		[state.dataSample]
+	);
 
 	useEffect(() => {
 		const timer = setTimeout(() => {
@@ -37,7 +40,6 @@ export default function SortBox(props: SortBoxProps) {
 	}, [inProgress, data]);
 
 	useEffect(() => {
-		setGenerator(algorithmData.generator(state.dataSample));
 		setData([...state.dataSample]);
 	}, [state.dataSample]);
 
