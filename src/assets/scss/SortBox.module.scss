@@ -24,3 +24,7 @@
 		height: 100%;
 	}
 }
+
+div[data-fullscreen] .sort-box-group {
+	min-width: 78vw;
+}

@@ -5,3 +5,9 @@
 	padding: 3rem;
 	gap: 3rem;
 }
+
+div[data-fullscreen] .dashboard {
+	padding: 1.5rem;
+	gap: 1.5rem;
+	justify-content: space-between;
+}
