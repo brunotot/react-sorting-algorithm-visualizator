@@ -6,3 +6,7 @@
 	height: 66vh;
 	justify-content: center;
 }
+
+div[data-fullscreen] .bar-container {
+	flex: 1;
+}

@@ -9,7 +9,7 @@ export type ConfigContainerProps = {
 };
 
 export default function ConfigContainer(props: ConfigContainerProps) {
-	const spacing = props.spacing ?? 2;
+	const spacing = props.spacing ?? 1;
 
 	return (
 		<Card>
